@@ -14,8 +14,10 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="index.html#sujets">Sujets</a></li>
+                 <li><a href="index.html">Accueil</a></li>
+                 <li><a href="#sujets">Sujets</a></li>
+                 <li><a href="inscription.html">Inscription</a></li>
+                 <li><a href="connexion.html">Connexion</a></li>
             </ul>
         </nav>
     </header>
@@ -56,6 +58,33 @@
                 <p>J'ai une question sur le fonctionnement du forum.</p>
             </article>
         </section>
+        
+<section>
+    <h3>Répondre à ce sujet</h3>
+
+    <form action="/reponses" method="post">
+
+        <fieldset>
+            <legend>Votre réponse</legend>
+
+            <label for="pseudo">Pseudo :</label>
+            <input type="text" id="pseudo"
+            name="pseudo" required>
+
+            <br><br>
+
+            <label for="message">Message :</label>
+            <textarea id="message"
+            name="message" required></textarea>
+
+        </fieldset>
+
+        <button type="submit">Envoyer la réponse</button>
+
+    </form>
+</section>
+
+
     </main>
 
     <footer>

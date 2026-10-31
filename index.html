@@ -18,6 +18,8 @@
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="#sujets">Sujets</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
         </ul>
     </nav>
 </header>
@@ -46,6 +48,59 @@
             <p>Je souhaite comprendre comment fonctionne le CSS.</p>
         </article>
     </section>
+    <section>
+    <h2>Nouveau sujet</h2>
+
+    <form action="/topics" method="post">
+
+        <fieldset>
+            <legend>Votre message</legend>
+
+            <label for="pseudo">Pseudo :</label>
+            <input type="text" id="pseudo" name="pseudo"
+            placeholder="Ex: alice" required>
+
+            <br><br>
+
+            <label for="titre">Titre du sujet :</label>
+            <input type="text" id="titre" name="titre"
+            maxlength="80" required>
+
+            <br><br>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message"
+            rows="6" maxlength="500" required></textarea>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Options de publication</legend>
+
+            <label for="categorie">Catégorie :</label>
+
+            <select id="categorie" name="categorie">
+                <option value="general">Général</option>
+                <option value="aide">Aide</option>
+                <option value="projets">Projets</option>
+            </select>
+
+            <p>Visibilité :</p>
+
+            <input type="radio" id="public"
+            name="visibilite" value="public" checked>
+            <label for="public">Public</label>
+
+            <input type="radio" id="prive"
+            name="visibilite" value="prive">
+            <label for="prive">Privé</label>
+
+        </fieldset>
+
+        <button type="submit">Publier le sujet</button>
+
+    </form>
+</section>
 </main>
 
 <footer>
